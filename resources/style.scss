@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "Inter";
+	font-weight: 100 900;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: "Regular";
+	src: url("./Montserrat-Regular.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* *{
+ margin: 0;
+ padding: 0;   
+}
+ */
+html {
+	background: black url("background.jpg") center center no-repeat;
+	background-size: cover;
+	color: white;
+	font-size: 16px;
+	font-family: Montserrat, Trebuchet, sans-serif;
+    line-height: 1.5em;
+}
+@supports (font-variation-settings: normal) {
+	html {
+		font-family: "Inter var", Helvetica, Arial, sans-serif;
+	}
+}
+
+body { display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpeed; }
+
+img, picture { max-width: 100%; display: block; }
+
+input, button, textarea, select { font: inherit; }
+
+strong { font-weight: 900; }
+
+/*******************************************/
+
+
+.Container {
+	height: 200vh;
+}
+
+    .Header {
+		position: sticky;
+		top: 0;
+		background: white;
+		box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+	;}
+        .Logo{}
+            .LogoImage{}
+
+        .TriggerButton{}
+
+            .MenuTrigger{}
+            .SearchTrigger{}
+            .CartTrigger{}
+
+                .TriggerImage{}
+                    .MenuTriggerImage{}
+                    .SearchTriggerImage{}
+                    .CartTriggerImage{}
+
+        .SearchForm{}
+            .Fieldset{}
+                .Legend{}
+                    .SearchLabel{}
+                        .SearchLabelText{}
+                        .Input{}
+                            .SearchInput{}
+
+
+
+		.MainMenu{}
+			.MainMenuList{}
+				.MainMenuItem{}
+					.MainMenuLink{}
+					.MainMenuSubList{}
+						.MainMenuSubItem{}
+							.MainMenuSubLink{
+								
+							}
+
+
+    .Main{}
+
+    .Footer{}
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************/
+
+
+
+
+
+
+body {
+	/* display: grid; */
+	display: block;
+	place-items: center;
+	margin: 0;
+	/* font-family: Inter, Helvetica, Arial, sans-serif; */
+	/* font-size: 16px; */
+	line-height: 1.5em;
+
+	@media (min-width: 500px) {
+		display: grid;
+	}
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within { scroll-behavior: auto; }
+	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+
+	* { background-image: none; background: white; color: black; }
+
+	@page { margin: 2cm; }
+	@page :first { margin-top: 3cm; }
+	@page :left { margin-right: 3cm; }
+	@page :right { margin-left: 3cm; }
+
+	html { background: white; font-size: 12pt; line-height: 1.5em; }
+
+	a:link, a:visited { color: #00f; background: transparent; font-weight: bold; }
+	a:not([href^="http"]):after { content: " (" attr(href) ")"; font-size: 0.9em; }
+	a[href^="/"]:after { content: " (https://radulazea.github.io/LinkInBio" attr(href) ") "; }
+	/*a:not(:local-link):after { content: " (" attr(href) ")»"; }*/
+	a:after > img { content: ""; }
+
+	body::after { content: "Copyright © Radu Lazea, toate drepturile rezervate."; display: block; text-align: center; }
+
+	.Container { background: transparent; margin: 0; padding: 0; }
+
+	h1, h2, h3, h4, h5, h6 { page-break-after: avoid; page-break-inside: avoid }
+	h1 + h2 { page-break-before: avoid; }
+
+	table, pre, img, svg, blockquote, a { break-inside: avoid; }
+
+	ul, ol, dl { page-break-before: avoid; }
+
+	.TitlulPaginii { padding-top: 0.5em; }
+	.ListaText { display: inline; color: #00f; white-space: normal; text-decoration: underline; }
+
+}
