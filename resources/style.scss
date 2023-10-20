@@ -36,6 +36,7 @@ html {
 	font-size: 16px;
 	font-family: Montserrat, Trebuchet, sans-serif;
     line-height: 1.5em;
+	/* overflow-x: hidden; */
 }
 @supports (font-variation-settings: normal) {
 	html {
@@ -558,22 +559,39 @@ a:hover{color: #000;}
 		margin: 2rem 0 0 0;
 		background: #eee;
 		border-top: 1px solid #ddd;
+		padding-bottom: 1px;
 	}
 		.FooterContainer{
-			display: block;
+			
+			
 			max-width: 86rem;
 			margin: auto;
-		}
-			.FooterSection{
-				display: block;
-				margin: 0 0 1.5em;
+
+			@media (min-width:800px){
+				display: grid;
+				grid-template-columns:1fr 1fr 1fr ;
+				grid-template-rows: auto;
+				grid-template-areas: "links misc newsletter" "contact payment security" "copyright copyright copyright";
 			}
 
-				.FooterLinks{}
+			@media (min-width: 1080px) { column-gap: clamp(2rem, 3vw, 4rem); row-gap: 1em; }
+		}
+			.FooterSection{
+				display: block;	
+			}
+
+				.FooterLinks{
+					grid-area: links;
+					@media (min-width: 500px) { float: left; width: 50%; }
+					@media (min-width: 800px) { float: none; width: auto; grid-area: links; }
+				}
 					.FooterTitle{
 						display: block;
 						padding: 0 1em;
 						font-size: 1rem;
+						margin: 2em 0 1em;
+
+						@media (min-width: 1100px) { font-size: 1.5em; line-height: 1em; margin: 1.3333em 0 0.6666em; padding: 0 0.6666em; }
 					}
 					.FooterLinksList{
 						display: block;
@@ -581,18 +599,30 @@ a:hover{color: #000;}
 						margin: 0;
 						padding: 0;
 
+						.FooterCopy & {
+							@media (min-width: 700px) { display: flex; flex-direction: row; font-size: 0.75rem; line-height: 1.5em; }
+							@media (min-width: 990px) { width: 33.3333%; }
+						}
+
 					}
 					.FooterParagraph{
 						display: block;
 						padding: 0 1em;
+						.FooterCopy & {
+						@media (min-width: 700px) { font-size: 0.75rem; line-height: 1.5em; }
+						@media (min-width: 990px) { width: 100%; text-align: right; }
+					}
 					}
 
-				.FooterMisc{}	
+				.FooterMisc{
+					grid-area: misc;
+					@media (min-width: 500px) { overflow: hidden; }
+				}	
 						.FooterSocialList{
-							margin: 0;
-							padding: 0 1em;
 							display: flex;
 							flex-wrap: wrap;
+							margin: 0;
+							padding: 0 1em;
 							list-style-type: none;
 						}
 							.FooterSocialItem{
@@ -601,10 +631,10 @@ a:hover{color: #000;}
 							}
 								.FooterSocialLink{
 								display: block;
+								padding: 0.25rem;
 								width: 2.25rem;
 								height: 2.25rem;
-							
-							}
+								}
 
 								.FooterSocialLink svg { display: block; width: 2.25rem; height: 2.25rem;
 									& * { fill: rgb(113, 152, 74); }
@@ -639,11 +669,24 @@ a:hover{color: #000;}
 							}
 						}
 
-				.FooterNewsletter{}
-					.FooterNewsletterForm{display: block; padding: 0 1em; }
-							.NewsletterLabel{display: block; padding: 0 0 1em;}
+				.FooterNewsletter{
+					clear: both;
+
+					grid-area: newsletter;
+					@media (min-width: 500px) { padding-top: 1px; }
+					@media (min-width: 820px) { padding-top: 0; }
+				}
+					.FooterNewsletterForm{
+						display: block; 
+						padding: 0 1em; }
+							.NewsletterLabel{
+								display: block; 
+								padding: 0 0 1em;
+							}
+
 								.NewsletterLabelText{}
 								.NewsletterInput{}
+
 							.NewsletterSubmit{
 								display: block;
 								width: 100%;
@@ -665,9 +708,12 @@ a:hover{color: #000;}
 				
 				
 				
-				.FooterContact{}
-				.FooterPayment{}
-				.FooterSecurity{}
+				.FooterContact{grid-area: contact;}
+				.FooterPayment{grid-area: payment;}
+				.FooterSecurity{grid-area: security;}
+				.FooterCopy { grid-area: copyright;
+					@media (min-width: 700px) { display: flex; flex-direction: row; border-top: 1px solid #ddd; }
+				}
 
 /*******************************************/
 
