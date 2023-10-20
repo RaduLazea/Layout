@@ -611,13 +611,25 @@ a:hover{color: #000;}
 							.FooterLink{display: block; position: relative; border-top: 1px solid #fff; border-bottom: 1px solid #ddd; padding: 0.5em 1em; text-transform: uppercase; text-decoration: none; color: #555;
 							
 							&::after{
-								content: ">";
-								display: block;
-								position: absolute;
-								top: 0;
-								right: 0;
+								content: '\203A'; 
+								display: block; 
+								padding: 0.25em;
+								position: absolute; 
+								right: 0; 
+								top: 0; 
+								font-size: 2em; 
+								line-height: 0.5em;
 							}
+							&:hover { 
+								background: rgba(98, 117, 0,0.2); 
+								color: #000; 
 							}
+							.FooterCopy & {
+								@media (min-width: 700px) { padding: 1em; border: none; color: #627500; text-transform: none; white-space: nowrap;
+									&:after { display: none; }
+								}
+							}
+						}
 
 				.FooterNewsletter{}
 					.FooterNewsletterForm{display: block; padding: 0 1em; }
