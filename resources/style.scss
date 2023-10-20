@@ -566,10 +566,15 @@ a:hover{color: #000;}
 		}
 			.FooterSection{
 				display: block;
+				margin: 0 0 1.5em;
 			}
 
 				.FooterLinks{}
-					.FooterTitle{}
+					.FooterTitle{
+						display: block;
+						padding: 0 1em;
+						font-size: 1rem;
+					}
 					.FooterLinksList{
 						display: block;
 						list-style-type: none;
@@ -577,12 +582,15 @@ a:hover{color: #000;}
 						padding: 0;
 
 					}
-					.FooterParagrapah{}
+					.FooterParagraph{
+						display: block;
+						padding: 0 1em;
+					}
 
 				.FooterMisc{}	
 						.FooterSocialList{
 							margin: 0;
-							padding: 0;
+							padding: 0 1em;
 							display: flex;
 							flex-wrap: wrap;
 							list-style-type: none;
