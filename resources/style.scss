@@ -2,11 +2,20 @@
 
 @font-face {
 	font-family: "Inter";
-	font-weight: 100 900;
+	font-weight: 400;
 	font-display: swap;
 	font-style: normal;
 	font-named-instance: "Regular";
 	src: url("./Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Inter";
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: "Bold";
+	src: url("./Montserrat-ExtraBold.woff2") format("woff2");
 }
 
 *,
@@ -21,7 +30,7 @@
 }
  */
 html {
-	background: black url("background.jpg") center center no-repeat;
+	
 	background-size: cover;
 	color: white;
 	font-size: 16px;
@@ -42,6 +51,35 @@ input, button, textarea, select { font: inherit; }
 
 strong { font-weight: 900; }
 
+a { color :rgb(113, 152, 74) } 
+a:hover{color: #000;}
+
+.ScreenReaders {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.Button { display: block;
+	border-radius: 0.5rem;
+	text-align: center;
+	padding: 0.5em 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+	background:rgb(113, 152, 74) ;
+	color: #fff;
+
+	&:hover{background: #000; color: #fff;}
+}
+
+
 /*******************************************/
 
 
@@ -50,65 +88,559 @@ strong { font-weight: 900; }
 }
 
     .Header {
+		display: flex;
 		position: sticky;
 		top: 0;
 		background: white;
 		box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+		height: 2.75rem;
+		z-index: 2;
+		
 	;}
-        .Logo{}
-            .LogoImage{}
+        .Logo{
+			display: block;
+			height: 3.75rem;
+			width: 3.75rem;
+			box-shadow: 0 0.5em 0.5em rgba(0,0,0,0.1);
+			background-color: rgb(113, 152, 74);
+			padding: 0;
+			/* position: relative; */
+			/* z-index: 99; */
+			
+		}
+            .LogoImage{
+				display: block;
+				height: 3.75rem;
+				width: 3.75rem;
+				/* position: relative; */
 
-        .TriggerButton{}
+			}
 
-            .MenuTrigger{}
+        .TriggerButton{
+			display: block;
+			/* width: 3rem;
+			height: 3rem; */
+			padding: 0.375rem;
+			margin: 0;
+			background: transparent;
+			border: none;
+			appearance: none;
+			cursor: pointer;
+			&:hover {background: #eee;}
+
+		}
+
+            .MenuTrigger{
+				/* @media (min-width) {
+					display: none;
+				} */
+
+				&.Active{
+						background:#eee ;
+				}
+			}
             .SearchTrigger{}
-            .CartTrigger{}
+            .CartTrigger{display: block; position:absolute; top: 0; right: 0;}
 
-                .TriggerImage{}
+                .TriggerImage{
+					/* position: absolute; */
+					display: block;
+					width: 2rem;
+					height: 2rem;
+				}
                     .MenuTriggerImage{}
                     .SearchTriggerImage{}
                     .CartTriggerImage{}
 
-        .SearchForm{}
-            .Fieldset{}
+        .SearchForm{
+			flex-grow: 1;
+			padding: 0.1875rem;
+			position: absolute;
+							top: 0;
+							right: 3.75rem;
+							bottom: 3.75rem;
+							left: 7.5rem;
+		}
+            .Fieldset{
+				display: block;
+				padding: 0;
+				border: none;
+				position: relative;
+			}
                 .Legend{}
-                    .SearchLabel{}
-                        .SearchLabelText{}
-                        .Input{}
-                            .SearchInput{}
-
-
-
-		.MainMenu{}
-			.MainMenuList{}
-				.MainMenuItem{}
-					.MainMenuLink{}
-					.MainMenuSubList{}
-						.MainMenuSubItem{}
-							.MainMenuSubLink{
-								
+					.Label{display: block; cursor: pointer;
+					&:hover{
+					 color:rgb(113, 152, 74)
+					}}
+						.SearchLabel{/* display: block; */}
+							.SearchLabelText{}
+								.Input{display: block; padding:0 0.5em; width: 100%; height: 2.375rem; line-height: 2rem; border: 1px solid #777; border-radius: 1em; outline-color:rgb(113, 152, 74) ;}
+									.SearchInput{}
+					.SubmitButton{}
+						.SearchSubmit{
+							display: block;
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							border-radius: 1em;
+							border: 1px solid #777; border-top-right-radius: 1rem;; border-bottom-right-radius: 1rem;
+						}
+							.SearchSubmitImage{
+								display: block;
+								width: 2rem;
+								height: 2rem;
 							}
 
+		.MainMenuContainer{}
+		
+			.MainMenu{
 
-    .Main{}
+				display: none;
+				position: absolute;
+				top: 3.75rem;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: calc(100vh - 3.75rem);
+				background: #eee;
+				padding: 1rem 0 ;
 
-    .Footer{}
+				overflow-y:auto ;
+
+				@media ( min-width: 1024px) 
+					{
+						display: none;
+						position: initial;
+						height: initial;
+						padding: 0;
+						right: initial;
+						bottom: initial;
+						
+
+						box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2);
+					}
+
+			}
+
+			/* .MainMenuContainer:hover .MainMenu{display: block;} */  // oricand i se intampla ceva lui MenuTrigger facem ceva pe MainMenus
+
+			
+
+			.MainMenu.Active	
+			{
+				display: block;
+			}
+
+			
+
+				.MainMenuList{
+					display: block;
+					padding: 0;
+					margin: 0;
+
+					/* @media ( min-width: 1024px) 
+					{
+						display: flex;
+					} */
+
+				}
+					.MainMenuItem{display: block;}
+						.MainMenuLink{display: block; padding: 0.5em 1em; font-size: 1.5em; font-weight: 700; color: #222; background: transparent; text-decoration: none;
+
+						&:hover{color: rgb(113, 152, 74); background: white;}
+						
+					}
+						/* .MainMenuLink:hover{color: rgb(113, 152, 74);} */
+						.MainMenuSubList{ display: block; margin: 0; padding: 0;
+							/* @media ( min-width: 1024px) 
+								{
+									display: none;
+								} */
+						}
+							.MainMenuSubItem{display: block;}
+								.MainMenuSubLink{display: block;padding: 0.75em 1.5em; text-decoration: none;color: #222; background: transparent;
+									&:hover{color: rgb(113, 152, 74); background: white;}}
+
+
+    .Main{
+		/* display: block;
+		color: black; */
+		/* font-size: clamp(1rem, 4vw, 3rem); */
+		/* background: grey; */
+	}
+
+		.Slider{display: block; position: relative; max-width: 86rem; margin:0 auto ;}
+			.SliderList{display: block;	margin:0 0 4.5rem;padding: 0; position: relative;}
+				.SliderItem{display: none; 
+				&.Active{display: block; animation: fadeIn 0.5s ease-in-out both;}
+			}
+					.SliderLink{display: block;}
+						.SliderImage{display: block;}
+							.SliderImage img{display: block;width: 100%; height: auto;}
+
+			.SliderControls{display: block; position: absolute; top:0; right: 0;bottom: 0;  left: 0; }
+				.SliderArrow{display: block; position: absolute;top: 25vw;padding: 0 4vw; z-index: 1;
+				&:hover{opacity: 0.5;}
+					@media (min-width: 750px) {
+					top: 13vw;}
+				
+					@media (min-width : 1375px) {
+					top: 12rem; padding: 0 1rem;
+				}
+			}
+					.SliderPrev{left: 0;
+					@media(min-width:1600px){
+						left: -6rem;
+					}}
+                	.SliderNext{right: 0;
+					@media(min-width:1600px){
+						right: -6rem;
+					}
+					}
+						.SliderArrowImage{display: block; width: clamp(1.5rem,5vw ,4rem);height: auto;} 
+						.SliderPrev .SliderArrowImage{transform: rotate(180deg);}
+				
+				.SliderPicker{display: flex; flex-direction: row; flex-wrap: nowrap; max-width: calc(100vw - 20px); overflow: auto; padding: 0 0 0 0.5rem; margin: 0; position: absolute; bottom:-4rem ; list-style: none;
+					@media (min-width: 750px) {
+						width: 100%;
+						justify-content: center;
+					}
+				}
+					.SliderPickerItem{display: block;margin: 0.5rem 2px 0.5rem 0}
+					
+                        .SliderPickerLink{display: block;width: 2em;height: 2em;background: #fff; border: 2px solid rgb(113, 152, 74); border-radius: 50%;
+						&:hover { border-color:#000 ; background: rgb(113, 152, 74);} 
+						.Active & {background: rgb(113, 152, 74);}
+						.Active &:hover {background: #000;}
+						}
+							.SliderPickerText{display: block; width: 0; white-space: nowrap; overflow: hidden;}
+
+		.Feeatures{display: block; padding: 1rem 0 0;}
+			.FeaturesTitle{display: block; margin: 1rem; font-size: 2rem; line-height: 1em; text-align:center ;}
+			.FeaturedList{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 0 auto;
+				padding: 0 0 1em;
+				list-style-type: none; 
+			@media (min-width: 750px){
+				flex-direction: row;
+			}}
+				.FeaturedItem{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align:center;
+					margin: 0 0 1em; 
+					padding: 0 1em;}
+					.FeaturedItem img {	display: block;  justify-content: center;}
+					.FeaturedItem title {display: block; margin: 0 0 0.5rem; font-size: 1.5rem; line-height: 1em;}
+					.FeaturedParagraph{display: block; margin: 0;}
+			.MainFeatures{ 
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 1rem 0;
+				border-top: 1px solid white;
+				
+				
+				@media (min-width: 750px){
+					flex-direction: row;
+					justify-content: center;
+				} }
+
+				.MainFeaturedItemTitle{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					
+					
+
+					@media (min-width: 750px){
+						flex-direction: row;
+						justify-content: center;
+					}
+				}
+						.MainFeatured img {display: block; }
+						.MainFeaturesParagraph {display: block;margin: 1rem;}
+						
+
+		.BookGrid{
+			display: block;
+			padding: 1rem 0 2rem; 
+			background: rgba(166,177,126,.25); 
+			
+		}
+			.BookGridTitle{
+				display: block;
+				margin: 1rem;
+				font-size: 2rem;
+				line-height: 1em;
+			}
+			.BookGridList{
+				display: block;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				
+
+				@media (min-width:650px){
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				}
+
+			}
+				.BookGridItem { 
+					display: block; 
+					clear: both; 
+					position: relative; 
+					margin: 1rem 0; 
+					padding: 0 0 1rem 0; 
+					border-bottom: 1px solid #ddd;
+					@media (min-width: 650px) { 
+						margin: 0; 
+						padding: 0; 
+						border-bottom: none; }
+				}
+					.BookGridLink { 
+						display: block; 
+						padding: 0 1rem;
+						color: #333; 
+						text-decoration: none;
+						@media (min-width: 650px) { 
+							margin: 1rem; 
+							position: relative; 
+							background: white; 	
+							border-bottom: 2rem solid #eee; 
+							box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1); 
+							outline: 1px solid #eee; }
+						&:hover { 
+							box-shadow: 0 0.5em 0.5em rgba(121, 153, 0, 0.5); 
+							border-bottom: 2rem solid #f8f8f8; 
+							outline: 1px solid #799900; }
+					}
+						.BookGridTumbnail{
+							display: block;
+							width: 100%;
+							height: auto;
+							margin-bottom: 1rem;
+
+							@media (min-width:380px){
+								float: left;
+								width: 33%;
+								height: auto;
+								margin: 0.5rem 0.5rem 0 0;
+							}
+							@media (min-width:580px){
+								width: 11rem; 
+								height: auto;
+							}
+							@media (min-width:650px){
+								width: 100%; 
+								height: auto; 
+								max-width: 300px; 
+								margin: 1rem auto;
+							}
+						}
+						.BookTitle{
+							display: block;
+							margin: 0.25rem 0;
+							font-size: 1rem;
+							line-height: 1.5rem;
+						}
+						.BookAuthor{
+							display: block; 
+							margin: 0.25rem 0;
+							font-weight: normal; 
+							text-transform: uppercase; 
+							font-size: 1rem; 
+							line-height: 1.5em; 
+							color: rgb(113, 152, 74); 					
+						}
+						.BookDescription{
+							display: block;
+							margin: 0.25rem 0;
+
+							@media ( min-width:480px){
+								overflow: hidden;
+							}
+							@media ( min-width:650px){
+								display: none;
+							}
+							
+						}
+						.Price { 
+							display: block; 
+							padding: 0.25rem 0.5rem; 
+							background: #fff; 	
+							clear: both; 
+							font-size: 1.5rem; 
+							line-height: 1em; 
+							text-align: right;
+
+							@media (min-width: 650px) { 
+								position: absolute; 
+								bottom: -2rem; 
+								right: 0; 
+								background: transparent; 
+								text-align: left; }
+
+							.BookGridLink:hover & { color: #799900; }
+						}
+							.PriceCurrency { letter-spacing: -1.5px; }
+								.Price span span { 
+									display: inline-block; 
+									margin: 0 -0.25em; 	
+									position: relative; 
+									top: -0.25em; 
+									font-size: 0.6666em; 
+									border-bottom: 3px solid #ddd; 
+									line-height: 1em; }
+
+						.Availability{
+							
+							display: flex; 
+							position: absolute; 
+							margin-top: -2rem;
+
+							@media (min-width: 650px) { 
+								left: 0; 
+								bottom: -2rem; 
+								margin-top: 0; }
+							}
+								.AvailableTag{
+									display: block; 
+									background: #f4bb3a; 
+									padding: 0.3333em 0.5em; 
+									text-transform: uppercase; 
+									font-size: 0.75rem;
+
+									.AvailabilityLimited & {background: #e81c24; color: white;}
+									.AvailabilityUnavailable & {background: #555; color: white;}
+									.AvailabilityPreorder & {background: #53acb4; color: white;}
+								}
+								.AvailableDuration{
+									display: none; 
+									padding: 0.25em; 
+									font-size: 0.75rem;
+									.AvailabilityInStock & {
+										display: block;
+									}
+								}
+							.Discount{ 
+								display: none; 
+								position: absolute; 
+								right: 0; 
+								top: 0.5rem; 
+								padding: 0.25em 0.5em; 
+								background: #ff6e40; 
+								color: #fff;
+								
+								.Discounted & {display: block;}
+								@media (min-width: 650px) { right: -0.5rem; }
+							}
+
+							
+						.PriceCurrency{display: none;}
 
 
 
+							
+
+    .Footer{
+		display: block;
+		margin: 2rem 0 0 0;
+		background: #eee;
+		border-top: 1px solid #ddd;
+	}
+		.FooterContainer{
+			display: block;
+			max-width: 86rem;
+			margin: auto;
+		}
+			.FooterSection{
+				display: block;
+			}
+
+				.FooterLinks{}
+					.FooterTitle{}
+					.FooterLinksList{
+						display: block;
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+
+					}
+					.FooterParagrapah{}
+
+				.FooterMisc{}	
+						.FooterSocialList{
+							margin: 0;
+							padding: 0;
+							display: flex;
+							flex-wrap: wrap;
+							list-style-type: none;
+						}
+							.FooterSocialItem{
+								display: block;
+								margin: 0 1rem 1rem 0;
+							}
+								.FooterSocialLink{
+								display: block;
+								width: 2.25rem;
+								height: 2.25rem;
+							
+							}
+
+								.FooterSocialLink svg { display: block; width: 2.25rem; height: 2.25rem;
+									& * { fill: rgb(113, 152, 74); }
+									&:hover * { 
+									
+										fill: black; }
+								}
+
+						.FooterLinksItem{
+							display: block; 
+						}
+							.FooterLink{display: block; position: relative; border-top: 1px solid #fff; border-bottom: 1px solid #ddd; padding: 0.5em 1em; text-transform: uppercase; text-decoration: none; color: #555;}
+
+				.FooterNewsletter{}
+					.FooterNewsletterForm{display: block; padding: 0 1em; }
+							.NewsletterLabel{display: block; padding: 0 0 1em;}
+								.NewsletterLabelText{}
+								.NewsletterInput{}
+							.NewsletterSubmit{
+								display: block;
+								width: 100%;
+								padding: 1rem;
+								background: #627500;
+								color: #fff;
+								border: none;
+								font-weight: bold;
+								text-transform: uppercase;
+								cursor: pointer;
+								border-radius: 1em;
+								
+								&:hover { background: #000; color: #fff; }
+							}
+
+					
 
 
-
-
-
-
-
+				
+				
+				
+				.FooterContact{}
+				.FooterPayment{}
+				.FooterSecurity{}
 
 /*******************************************/
-
-
-
-
 
 
 body {
@@ -120,10 +652,13 @@ body {
 	/* font-size: 16px; */
 	line-height: 1.5em;
 
-	@media (min-width: 500px) {
+	/* @media (min-width: 500px) {
 		display: grid;
-	}
+	} */
+	color: black;
 }
+
+
 
 
 
@@ -133,7 +668,7 @@ body {
 	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
-@media print {
+/* @media print {
 
 	* { background-image: none; background: white; color: black; }
 
@@ -146,9 +681,9 @@ body {
 
 	a:link, a:visited { color: #00f; background: transparent; font-weight: bold; }
 	a:not([href^="http"]):after { content: " (" attr(href) ")"; font-size: 0.9em; }
-	a[href^="/"]:after { content: " (https://radulazea.github.io/LinkInBio" attr(href) ") "; }
+	a[href^="/"]:after { content: " (https://radulazea.github.io/LinkInBio" attr(href) ") "; } */
 	/*a:not(:local-link):after { content: " (" attr(href) ")»"; }*/
-	a:after > img { content: ""; }
+/* 	a:after > img { content: ""; }
 
 	body::after { content: "Copyright © Radu Lazea, toate drepturile rezervate."; display: block; text-align: center; }
 
@@ -164,4 +699,4 @@ body {
 	.TitlulPaginii { padding-top: 0.5em; }
 	.ListaText { display: inline; color: #00f; white-space: normal; text-decoration: underline; }
 
-}
+} */
