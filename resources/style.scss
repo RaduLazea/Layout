@@ -570,7 +570,7 @@ a:hover{color: #000;}
 			@media (min-width:800px){
 				display: grid;
 				grid-template-columns:1fr 1fr 1fr ;
-				grid-template-rows: auto;
+		 		grid-template-rows: auto;
 				grid-template-areas: "links misc newsletter" "contact payment security" "copyright copyright copyright";
 			}
 
@@ -608,6 +608,7 @@ a:hover{color: #000;}
 					.FooterParagraph{
 						display: block;
 						padding: 0 1em;
+
 						.FooterCopy & {
 						@media (min-width: 700px) { font-size: 0.75rem; line-height: 1.5em; }
 						@media (min-width: 990px) { width: 100%; text-align: right; }
