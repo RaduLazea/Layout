@@ -623,7 +623,7 @@ a:hover{color: #000;}
 							display: flex;
 							flex-wrap: wrap;
 							margin: 0;
-							padding: 0 1em;
+							padding: 0.5em 1em;
 							list-style-type: none;
 						}
 							.FooterSocialItem{
@@ -643,6 +643,35 @@ a:hover{color: #000;}
 									
 										fill: black; }
 								}
+
+
+								.Twitter svg{
+									&:hover *{
+										fill: #00acee ;
+									}
+								}
+								.FaceBook svg{
+									&:hover *{
+										fill: #1877F2;
+									}
+								}
+								.GooglePlus svg{
+									&:hover *{
+										fill: #db4a39 ;
+									}
+								}
+								.YouTube svg{
+									&:hover *{
+										fill: #FF0000 ;
+									}
+								}
+								.Instagram svg{
+									&:hover *{
+										fill: #d62976  ; 
+									}
+								}
+								
+								
 
 						.FooterLinksItem{
 							display: block; 
