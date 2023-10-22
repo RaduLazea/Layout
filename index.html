@@ -58,6 +58,10 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="theme-color" content="#ffffff" />
 
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
 
 </head>
@@ -144,7 +148,7 @@
                     <legend class="Legend ScreenReaders">Cauta pe site-ul Carturesti</legend>
                     <label class="SearchLabel">
                         <span class="SearchLabelText ScreenReaders">Introdu textul cautat aici:</span>
-                        <input type="search" class="SearchInput Input" maxlength="200" placeholder="Cauta...">
+                        <input type="search" class="SearchInput Input" id="searchInput" maxlength="200" placeholder="Cauta..." onkeyup="search_book1()">
                     </label>
 
                     <button class="SearchSubmit SubmitButton">
@@ -182,11 +186,11 @@
             <section class="Slider">
 
                 <nav class="SliderControls">
-                    <a href="#" class="SliderArrow SliderPrev" title="Revino la img precedenta">
+                    <a id="previousSlide" href="#" class="SliderArrow SliderPrev" title="Revino la img precedenta">
                         <img src="resources/icon-right-arrow.svg" class="SliderArrowImage" alt="Imaginea precedenta"
                             width="48px" height="60px">
                     </a>
-                    <a href="#" class="SliderArrow SliderNext" title="Revino la img precedenta">
+                    <a id="nextSlide" href="#" class="SliderArrow SliderNext" title="Revino la img precedenta">
                         <img src="resources/icon-right-arrow.svg" class="SliderArrowImage" alt="Imaginea urmatoare"
                             width="48px" height="60px">
                     </a>
@@ -194,20 +198,20 @@
 
                     </a>
 
-                    <ol class="SliderPicker">
+                    <ol id="sliderPicker" class="SliderPicker">
                         <li class="SliderPickerItem">
-                            <a href="" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
+                            <a href="#" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
                                 <span class="SliderPickerText" id="sliderPickerText">Imaginea 1 - Ticket to Ride
                                     Europe</span>
                             </a>
                         </li>
                         <li class="SliderPickerItem">
-                            <a href="" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
+                            <a href="#" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
                                 <span class="SliderPickerText" id="sliderPickerText">Imaginea 2 - Carcassone</span>
                             </a>
                         </li>
                         <li class="SliderPickerItem">
-                            <a href="" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
+                            <a href="#" class="SliderPickerLink" title="Mergi la img cu nr @TODO">
                                 <span class="SliderPickerText" id="sliderPickerText">Imaginea 3 - Catlover</span>
                             </a>
                         </li>
@@ -216,7 +220,7 @@
 
                 </nav>
 
-                <ol class="SliderList">
+                <ol id="sliderList" class="SliderList">
                     <li class="SliderItem Active">
                         <a href="#" class="SliderLink" title="Vezi articolul despre Ticket to Ride Europe">
                             <picture class="SliderImage">
@@ -321,10 +325,109 @@
 
             </section>
 
-            <section class="BookGrid">
+            <section class="BookGrid" id="bookGrid">
                 <h2 class="BookGridTitle">Precomenzi</h2>
-                <ol class="BookGridList">
+                <ol class="BookGridList" id="bookGridList">
 
+                    <li class="BookGridItem Discounted AvailabilityInStock">
+                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Creierul_puternic.jpg"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Creierul_puternic.jpg" alt="Creierul puternic"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" id="bookTitle">Creierul puternic</h3>
+                            <h4 class="BookAuthor">Anders Hansen</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                                
+                            <span class="Price">
+                                <span itemprop="price" content="52.00"></span>
+                                <strong>65</strong>
+                                <span>.00</span>
+                                
+                            </span>
+
+                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem Discounted AvailabilityInStock">
+                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Gandire_rapida_Gandire_Lenta.jpg"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Gandire_rapida_Gandire_Lenta.jpg" alt="Carte Gandire rapida Gandire Lenta"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" id="bookTitle">Gandire rapida Gandire lenta</h3>
+                            <h4 class="BookAuthor">Daniel Kahneman</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                                
+                            <span class="Price">
+                                <span itemprop="price" content="52.00"></span>
+                                <strong>65</strong>
+                                <span>.00</span>
+                                
+                            </span>
+
+                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem Discounted AvailabilityInStock">
+                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Dopamina.jpg"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Dopamina.jpg" alt="Cartea Dopamina"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" id="bookTitle">Dopamina</h3>
+                            <h4 class="BookAuthor">Daniel Z. Lieberman, Michael E. Long</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                                
+                            <span class="Price">
+                                <span itemprop="price" content="52.00"></span>
+                                <strong>65</strong>
+                                <span>.00</span>
+                                
+                            </span>
+
+                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
                     <li class="BookGridItem Discounted AvailabilityInStock">
                         <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
                             <picture class="BookGridPicture">
@@ -333,7 +436,40 @@
                                 <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
                                     height="" width="100" itemprop="image">
                             </picture>
-                            <h3 class="BookTitle">Nudge</h3>
+                            <h3 class="BookTitle" id="bookTitle">Nudge</h3>
+                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                                
+                            <span class="Price">
+                                <span itemprop="price" content="52.00"></span>
+                                <strong>65</strong>
+                                <span>.00</span>
+                                
+                            </span>
+
+                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem Discounted AvailabilityInStock">
+                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Nudge.webp"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" id="bookTitle">Nudge</h3>
                             <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
@@ -563,6 +699,54 @@
                                 width="100">
                             <h3 class="BookTitle">Nudge</h3>
                             <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <span class="Price">
+                                <strong>65</strong>.00
+                                <span>lei</span>
+                            </span>
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  Discounted InStock">
+                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Fluxul.jpg" alt="Cartea Fluxul" height=""
+                                width="100">
+                            <h3 class="BookTitle">Fluxul de idei</h3>
+                            <h4 class="BookAuthor">Jeremy Utley, Perry Klebahn</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <span class="Price">
+                                <strong>65</strong>.00
+                                <span>lei</span>
+                            </span>
+                            <span class="Availability">
+                                <span class="AvailableTag">In stoc</span>
+                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
+                                    <strong>24</strong>h</span>
+                            </span>
+                            <span class="Discount">-10%</span>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  Discounted InStock">
+                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Cum.jpg" alt="Cartea Cum" height=""
+                                width="100">
+                            <h3 class="BookTitle">Cum sa decizi</h3>
+                            <h4 class="BookAuthor">Annie Duke</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
