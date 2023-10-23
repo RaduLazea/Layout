@@ -41,7 +41,7 @@
 
 
     <!-- design -->
-    
+
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -78,12 +78,12 @@
             </a>
             <div class="MainMenuContainer">
                 <button class="MenuTrigger TriggerButton" id="menuTrigger">
-                    
+
 
                     <img src="resources/icon-menu.svg" class="MenuTriggerImage TriggerImage" alt="Icon Menu"
                         height="32px">
 
-                    
+
                 </button>
                 <nav class="MainMenu" id="mainMenu">
                     <ul class="MainMenuList">
@@ -148,15 +148,16 @@
                     <legend class="Legend ScreenReaders">Cauta pe site-ul Carturesti</legend>
                     <label class="SearchLabel">
                         <span class="SearchLabelText ScreenReaders">Introdu textul cautat aici:</span>
-                        <input type="search" class="SearchInput Input" id="searchInput" maxlength="200" placeholder="Cauta..." onkeyup="search_book1()">
+                        <input type="search" class="SearchInput Input" id="searchInput" maxlength="200"
+                            placeholder="Cauta..." onkeyup="search_book1()">
                     </label>
 
                     <button class="SearchSubmit SubmitButton">
-                        
+
 
                         <img src="resources/icon-search.svg" class="SearchSubmitImage" alt="Ioon Seach" height="44">
 
-                        
+
 
                     </button>
 
@@ -167,16 +168,16 @@
 
 
 
-            
+
 
 
 
             <a href="#" class="CartTrigger TriggerButton">
-                
+
 
                 <img src="resources/icon-cart.svg" class="CartTriggerImage TriggerImage" alt="Icon Cart">
 
-               
+
             </a>
 
         </header>
@@ -257,7 +258,7 @@
                             </picture>
                         </a>
                     </li>
-                   
+
 
 
                 </ol>
@@ -329,437 +330,485 @@
                 <h2 class="BookGridTitle">Precomenzi</h2>
                 <ol class="BookGridList" id="bookGridList">
 
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
                             <picture class="BookGridPicture">
                                 <source type="image/webp" srcset="resources/Carte_Creierul_puternic.jpg"
                                     media="(min-width: 100px)" />
-                                <img class="BookGridTumbnail" src="resources/Carte_Creierul_puternic.jpg" alt="Creierul puternic"
-                                    height="" width="100" itemprop="image">
+                                <img class="BookGridTumbnail" src="resources/Carte_Creierul_puternic.jpg"
+                                    alt="Creierul puternic" height="" width="100" itemprop="image">
                             </picture>
-                            <h3 class="BookTitle" id="bookTitle">Creierul puternic</h3>
-                            <h4 class="BookAuthor">Anders Hansen</h4>
+                            <h3 class="BookTitle" itemprop="name" id="bookTitle">Creierul puternic</h3>
+                            <h4 class="BookAuthor" itemprop="author">Anders Hansen</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                                
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                
-                            </span>
 
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
 
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
                             <picture class="BookGridPicture">
                                 <source type="image/webp" srcset="resources/Carte_Gandire_rapida_Gandire_Lenta.jpg"
                                     media="(min-width: 100px)" />
-                                <img class="BookGridTumbnail" src="resources/Carte_Gandire_rapida_Gandire_Lenta.jpg" alt="Carte Gandire rapida Gandire Lenta"
-                                    height="" width="100" itemprop="image">
+                                <img class="BookGridTumbnail" src="resources/Carte_Gandire_rapida_Gandire_Lenta.jpg"
+                                    alt="Carte Gandire rapida Gandire Lenta" height="" width="100" itemprop="image">
                             </picture>
-                            <h3 class="BookTitle" id="bookTitle">Gandire rapida Gandire lenta</h3>
-                            <h4 class="BookAuthor">Daniel Kahneman</h4>
+                            <h3 class="BookTitle" itemprop="name" id="bookTitle">Gandire rapida Gandire lenta</h3>
+                            <h4 class="BookAuthor" itemprop="author">Daniel Kahneman</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                                
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                
-                            </span>
 
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
 
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discoun itemprop="availability" href="https://schema.org/InStock"t">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
                             <picture class="BookGridPicture">
                                 <source type="image/webp" srcset="resources/Carte_Dopamina.jpg"
                                     media="(min-width: 100px)" />
                                 <img class="BookGridTumbnail" src="resources/Carte_Dopamina.jpg" alt="Cartea Dopamina"
                                     height="" width="100" itemprop="image">
                             </picture>
-                            <h3 class="BookTitle" id="bookTitle">Dopamina</h3>
-                            <h4 class="BookAuthor">Daniel Z. Lieberman, Michael E. Long</h4>
+                            <h3 class="BookTitle" itemprop="name" id="bookTitle">Dopamina</h3>
+                            <h4 class="BookAuthor" itemprop="author">Daniel Z. Lieberman, Michael E. Long</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                                
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                
-                            </span>
 
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
-
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
-                            <picture class="BookGridPicture">
-                                <source type="image/webp" srcset="resources/Carte_Nudge.webp"
-                                    media="(min-width: 100px)" />
-                                <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
-                                    height="" width="100" itemprop="image">
-                            </picture>
-                            <h3 class="BookTitle" id="bookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
-                                
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                
-                            </span>
-
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
-
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
-                            <picture class="BookGridPicture">
-                                <source type="image/webp" srcset="resources/Carte_Nudge.webp"
-                                    media="(min-width: 100px)" />
-                                <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
-                                    height="" width="100" itemprop="image">
-                            </picture>
-                            <h3 class="BookTitle" id="bookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
-                                
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                
-                            </span>
-
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
-
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem  AvailabilityPreorder">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
-
-                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
                                 <span class="Price">
                                     <span itemprop="price" content="52.00"></span>
                                     <strong>65</strong>
                                     <span>.00</span>
-                                    
+
                                 </span>
-    
+
                                 <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
-                            <span class="Availability">
-                                <span class="AvailableTag">Precomanda</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  AvailabilityLimited">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
-
-                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag"> <span class="Hidden">Stoc </span>Limitat</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem  AvailabilityUnavailable">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
-
-                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">Stoc indisponibil</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem  Discounted InStock">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
-
-                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
-
-                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
-                                si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
-
-                        </a>
-
-                    </li>
-                    <li class="BookGridItem Discounted AvailabilityInStock">
-                        <a class="BookGridLink" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
                             <picture class="BookGridPicture">
                                 <source type="image/webp" srcset="resources/Carte_Nudge.webp"
                                     media="(min-width: 100px)" />
                                 <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
                                     height="" width="100" itemprop="image">
                             </picture>
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+                            <h3 class="BookTitle" itemprop="name" id="bookTitle">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <span itemprop="price" content="52.00"></span>
-                                <strong>65</strong>
-                                <span>.00</span>
-                                <span>lei</span>
-                            </span>
 
-                            <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
 
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  AvailabilityPreorder">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Nudge.webp"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" itemprop="name" id="bookTitle">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
+
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  AvailabilityPreorder" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">Precomanda</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
+
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/BackOrder">
+                                    <span class="AvailableTag">Precomanda</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  AvailabilityLimited">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem  AvailabilityLimited" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag"> <span class="Hidden">Stoc </span>Limitat</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/LimitedAvailability">
+                                    <span class="AvailableTag"> <span class="Hidden">Stoc </span>Limitat</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  AvailabilityUnavailable">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem  AvailabilityUnavailable" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">Stoc indisponibil</span>
-                                <span class="AvailableDuration"> <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/OutOfStock">
+                                    <span class="AvailableTag">Stoc indisponibil</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  Discounted InStock">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem  Discounted InStock" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
-                                width="100">
-                            <h3 class="BookTitle">Nudge</h3>
-                            <h4 class="BookAuthor">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  Discounted InStock">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem Discounted AvailabilityInStock" itemscope
+                        itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="#" title="Vezi pagina cu detalii pt cartea @TODO">
+                            <picture class="BookGridPicture">
+                                <source type="image/webp" srcset="resources/Carte_Nudge.webp"
+                                    media="(min-width: 100px)" />
+                                <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge"
+                                    height="" width="100" itemprop="image">
+                            </picture>
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <span itemprop="price" content="52.00"></span>
+                                    <strong>65</strong>
+                                    <span>.00</span>
+                                    <span>lei</span>
+                                </span>
+
+                                <span class="PriceCurrency" itemprop="priceCurrency" content="RON">lei</span>
+
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  AvailabilityPreorder" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/PreOrder">
+                                    <span class="AvailableTag">Precomanda</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  AvailabilityLimited" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/LimitedAvailability">
+                                    <span class="AvailableTag"> <span class="Hidden">Stoc </span>Limitat</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  AvailabilityUnavailable" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/OutOfStock">
+                                    <span class="AvailableTag">Stoc indisponibil</span>
+                                    <span class="AvailableDuration"> <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  Discounted InStock" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+
+                            <img class="BookGridTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Nudge</h3>
+                            <h4 class="BookAuthor" itemprop="author">CASS R. SUNSTEIN, RICHARD H. THALER</h4>
+
+                            <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
+                                si a mediului inconjurator</p>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
+
+                        </a>
+
+                    </li>
+                    <li class="BookGridItem  Discounted InStock" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Fluxul.jpg" alt="Cartea Fluxul" height=""
-                                width="100">
-                            <h3 class="BookTitle">Fluxul de idei</h3>
-                            <h4 class="BookAuthor">Jeremy Utley, Perry Klebahn</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Fluxul de idei</h3>
+                            <h4 class="BookAuthor" itemprop="author">Jeremy Utley, Perry Klebahn</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
                     </li>
-                    <li class="BookGridItem  Discounted InStock">
-                        <a class="BookGridLink" href="" title="Vezi pagina cu detalii pt cartea @TODO">
+                    <li class="BookGridItem  Discounted InStock" itemscope itemtype="https://schema.org/Book">
+                        <a class="BookGridLink" itemprop="url" href="" title="Vezi pagina cu detalii pt cartea @TODO">
 
                             <img class="BookGridTumbnail" src="resources/Carte_Cum.jpg" alt="Cartea Cum" height=""
-                                width="100">
-                            <h3 class="BookTitle">Cum sa decizi</h3>
-                            <h4 class="BookAuthor">Annie Duke</h4>
+                                width="100" itemprop="image">
+                            <h3 class="BookTitle" itemprop="name">Cum sa decizi</h3>
+                            <h4 class="BookAuthor" itemprop="author">Annie Duke</h4>
 
                             <p class="BookDescription">Cum sa luam decizii mai bune in privinta banilor, a sanatatii
                                 si a mediului inconjurator</p>
-                            <span class="Price">
-                                <strong>65</strong>.00
-                                <span>lei</span>
-                            </span>
-                            <span class="Availability">
-                                <span class="AvailableTag">In stoc</span>
-                                <span class="AvailableDuration" title="Daca faci azi comanda, vei avea cartea in 24H">
-                                    <strong>24</strong>h</span>
-                            </span>
-                            <span class="Discount">-10%</span>
+                            <div class="Offer" itemscope itemtype="https://schema.org/Offer">
+                                <span class="Price">
+                                    <strong>65</strong>.00
+                                    <span>lei</span>
+                                </span>
+                                <span class="Availability" itemprop="availability" href="https://schema.org/InStock">
+                                    <span class="AvailableTag">In stoc</span>
+                                    <span class="AvailableDuration"
+                                        title="Daca faci azi comanda, vei avea cartea in 24H">
+                                        <strong>24</strong>h</span>
+                                </span>
+                                <span class="Discount">-10%</span>
+                            </div>
 
                         </a>
 
