@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nudge</title>
+
+    <link rel="stylesheet" href="resources/style.css">
+
+    <!-- SEO -->
+    <!-- <title>Proiect de layout complex - Cărturești Carte</title> -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="Proiect demonstrativ care urmărește crearea unui layout complex în HTML și CSS cu model de design homepage-ul Cărturești.ro" />
+
+    <link rel="canonical" href="" />
+
+    <meta property="og:title" content="Proiect de layout complex - Cărturești Homepage" />
+    <meta property="og:description"
+        content="Proiect demonstrativ care urmărește crearea unui layout complex în HTML și CSS cu model de design homepage-ul Cărturești.ro" />
+    <meta property="og:site_name" content="Layout Complex" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ro_RO" />
+
+    <meta property="og:url" content="@TODO" />
+
+    <meta property="og:image" content="./og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:image:alt"
+        content="Design-ul site-ului Cărturești, refăcut complet de la zero în HTML și CSS." />
+    <meta property="article:publisher" content="https://www.facebook.com/raducu.lazea/" />
+    <meta property="article:published_time" content="2023-10-20T20:27:55+03:00" />
+    <meta property="article:modified_time" content="2023-10-20T20:27:57+03:00" />
+    <meta name="twitter:site" content="@RaduLazea" />
+    <meta name="twitter:creator" content="@RaduLazea" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+
+    <!-- design -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#4f6df5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link rel="manifest" href="my.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Proiect de layout complex" />
+    <meta name="application-name" content="Layout Complex" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+</head>
+
+
+<body>
+    <div class="Container">
+        <header class="Header">
+
+            <a href="/" class="Logo" title="Inapoi la pagina principala Carturesti">
+                <img src="resources/icon-logo.svg" alt="Logo-ul Carturesti" class="LogoImage" width="90" height="90">
+
+            </a>
+            <div class="MainMenuContainer">
+                <button class="MenuTrigger TriggerButton" id="menuTrigger">
+
+
+                    <img src="resources/icon-menu.svg" class="MenuTriggerImage TriggerImage" alt="Icon Menu"
+                        height="32px">
+
+
+                </button>
+                <nav class="MainMenu" id="mainMenu">
+                    <ul class="MainMenuList">
+                        <li class="MainMenuItem">
+
+                            <a href="#" class="MainMenuLink">Carte</a>
+                            <ul class="MainMenuSubList">
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">AudioBooks</a> </li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Culinare</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Arta, Arhitectura</a>
+                                </li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Enciclopedii</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Biografii</a></li>
+                            </ul>
+                        </li>
+                        <li class="MainMenuItem">
+                            <a href="#" class="MainMenuLink">Scolaresti</a>
+                            <ul class="MainMenuSubList">
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">AudioBooks</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Culinare</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Enciclopedii</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Biografii</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Arta, Arhitectura</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="MainMenuItem">
+                            <a href="#" class="MainMenuLink">Rafturi</a>
+                            <ul class="MainMenuSubList">
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Gradinita</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Grupa pregatitoare</a>
+                                </li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Clasa I</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Clasa a II-a</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Clasa a III-a</a></li>
+                            </ul>
+                        </li>
+                        <li class="MainMenuItem">
+                            <a href="#" class="MainMenuLink">Rafturi Alese</a>
+                            <ul class="MainMenuSubList">
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Festivalul Enescu
+                                        2023</a>
+                                </li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Lecturi recomandate de
+                                        Școala Încrederii</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Raftul cărților
+                                        ecranizate</a></li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Raftul premiilor
+                                        Gopo</a>
+                                </li>
+                                <li class="MainMenuSubItem"><a href="#" class="MainMenuSubLink">Raftul autorilor
+                                        romani</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <form class="SearchForm" action="#" method="get" id="searchForm">
+                <fieldset class="Fieldset ">
+                    <legend class="Legend ScreenReaders">Cauta pe site-ul Carturesti</legend>
+                    <label class="SearchLabel">
+                        <span class="SearchLabelText ScreenReaders">Introdu textul cautat aici:</span>
+                        <input type="search" class="SearchInput Input" id="searchInput" maxlength="200"
+                            placeholder="Cauta..." onkeyup="search_book1()">
+                    </label>
+
+                    <button class="SearchSubmit SubmitButton">
+
+
+                        <img src="resources/icon-search.svg" class="SearchSubmitImage" alt="Ioon Seach" height="44">
+
+
+
+                    </button>
+
+
+                </fieldset>
+            </form>
+
+
+
+
+
+
+
+
+            <a href="#" class="CartTrigger TriggerButton">
+
+
+                <img src="resources/icon-cart.svg" class="CartTriggerImage TriggerImage" alt="Icon Cart">
+
+
+            </a>
+
+        </header>
+
+        <main class="Main_Book_Page">
+            <!-- <img src="/resources/Carte_Nudge.jpeg" alt="" width="200" height=""> -->
+
+            <section class="Book_Section">
+
+                <section class="BookContainer">
+                    <picture class="BookPicture">
+                        <source type="image/webp" srcset="resources/Carte_Nudge.webp" media="(min-width:200px)" />
+                        <img class="BookTumbnail" src="resources/Carte_Nudge.jpeg" alt="Cartea Nudge" height=""
+                            width="200" itemprop="image">
+                    </picture>
+                </section>
+
+                
+                <section class="BookDescription">
+                    <div class="BookTitleContainer">
+                        <h1 class="BookPageTitle">Nudge</h1>
+                        <h3 class="BookPageSubTitle">Cum sa luam decizii mai bune in privinta banilor, a sanatatii si a
+                            mediului inconjurator</h3>
+                        <h2 class="BookAuthor">Cass R. Sunstein, Richard H. Thaler</h2>
+                    </div>
+
+                    <!-- <div class="range">
+                        <div class="sliderValue">
+                            <span>5</span>
+                        </div>
+                        <div class="field">
+                            <div class="value left">
+                                0</div>
+                            <input type="range" min="10" max="200" value="100" steps="1">
+                            <div class="value right">
+                                10</div>
+                        </div>
+                    </div> -->
+                    <!-- <script>
+                            const slideValue = document.querySelector("span");
+                            const inputSlider = document.querySelector("input");
+                            inputSlider.oninput = (() => {
+                                let value = inputSlider.value;
+                                slideValue.textContent = value;
+                                slideValue.style.left = (value / 2) + "%";
+                                slideValue.classList.add("show");
+                            });
+                            inputSlider.onblur = (() => {
+                                slideValue.classList.remove("show");
+                            });
+                        </script> -->
+                    <div class="ProductDesc">
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Categorii:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <a href="">Dezvoltare personala</a>
+                            </div>
+                        </div>
+
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Data publicării:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <p class="BookAttrP">2022</p>
+                            </div>
+
+                        </div>
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Editura:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <span>
+                                    <a href="https://www.publica.ro/">Publica</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Tip copertă:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <p class="BookAttrP"> Paperback</p>
+                            </div>
+
+                        </div>
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Nr Pag:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <p class="BookAttrP">
+                                    456
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    Traducatori:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <a href="https://www.cartepedia.ro/autor/smaranda-nistor-107261">Smaranda Nistor</a>
+                            </div>
+                        </div>
+
+                        <div class="BookAttr">
+                            <div class="BookAttrLeft">
+                                <span class="BookAttrLabel">
+                                    ISBN:
+                                </span>
+                            </div>
+                            <div class="BookAttrRight">
+                                <p class="BookAttrP">9786067225105</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <section class="AddToContainer">
+
+                        <div class="AddButtonContainer">
+                            <button class="AddToCartButton" type="submit">
+                                <span>Adaugă în coș</span>
+                            </button>
+                        </div>
+
+                        <div class="AddButtonContainer">
+                            <button class="AddToWishButton" type="submit">
+                                <span>Adaugă în Favorite</span>
+                            </button>
+                        </div>
+        
+                    </section>
+
+
+                
+                
+                </section>
+            </section>
+
+            
+
+
+
+        </main>
+
+
+
+        <footer class="Footer">
+
+            <div class="FooterContainer">
+                <section class="FooterSection FooterLinks">
+                    <h2 class="FooterTitle">
+                        Link-uri utile
+                    </h2>
+
+                    <ul class="FooterLinksList">
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Despre Carturesti RO</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Despre Carturesti</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Joburi</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Asistenta</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Livrare in librarie</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Livrare in librarie</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Politica de confidentialitate</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a href="#" class="FooterLink" title="@TODO">Politica de retur</a>
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+                <section class="FooterSection FooterMisc">
+                    <h2 class="FooterTitle"> Livrare gratuita </h2>
+                    <p class="FooterParagraph"> Pentru comenzi peste 150 de lei dacă toate produsele pot fi livrate
+                        într-un singur colet. </p>
+                    <h2 class="FooterTitle">
+                        Follow us
+
+                        <ul class="FooterSocialList">
+                            <li class="FooterSocialItem">
+                                <!-- facebook-->
+                                <a class="FooterSocialLink FaceBook" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)"
+                                            d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z">
+                                        </path>
+                                    </svg>
+                                    <span class="ScreenReaders">Pagina de FaceBook a Carturestiului</span>
+                                </a>
+                            </li>
+                            <li class="FooterSocialItem">
+                                <!-- twitter-->
+                                <a class="FooterSocialLink Twitter" href="#">
+                                    <svg viewBox="0 0 24 24">
+
+                                        <path fill="rgba(255,255,255,.85)"
+                                            d="M17.71,9.33C17.64,13.95 14.69,17.11 10.28, 17.31C8.46,17.39 7.15,16.81 6,16.08C7.34,16.29 9,15.76 9.9,15C8.58,14.86 7.81,14.19 7.44,13.12C7.82,13.18 8.22,13.16 8.58,13.09C7.39,12.69 6.54,11.95 6.5,10.41C6.83,10.57 7.18,10.71 7.64,10.74C6.75,10.23 6.1,8.38 6.85,7.16C8.17,8.61 9.76,9.79 12.37,9.95C11.71,7.15 15.42,5.63 16.97,7.5C17.63,7.38 18.16,7.14 18.68,6.86C18.47,7.5 18.06,7.97 17.56,8.33C18.1,8.26 18.59,8.13 19,7.92C18.75,8.45 18.19,8.93 17.71,9.33M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+                                        </path>
+                                    </svg>
+                                    <span class="ScreenReaders">Pagina de Twitter a Carturestiului</span>
+                                </a>
+                            </li>
+                            <!-- <li class="FooterSocialItem">
+                             google plus
+                            <a class="FooterSocialLink GooglePlus" href="#">
+                                <svg viewBox="0 0 24 24" style="border: 3px solid transparent;">
+                                    <path fill="rgba(255,255,255,.85)"
+                                        d="M21.75 0h-19.5c-1.237 0-2.25 1.013-2.25 2.25v19.5c0 1.237 1.013 2.25 2.25 2.25h19.5c1.237 0 2.25-1.013 2.25-2.25v-19.5c0-1.237-1.013-2.25-2.25-2.25zM9 18c-3.319 0-6-2.681-6-6s2.681-6 6-6c1.622 0 2.977 0.591 4.022 1.57l-1.631 1.566c-0.445-0.427-1.223-0.923-2.391-0.923-2.048 0-3.722 1.697-3.722 3.787s1.673 3.788 3.722 3.788c2.377 0 3.267-1.706 3.403-2.588h-3.403v-2.058h5.667c0.052 0.3 0.094 0.6 0.094 0.994 0 3.431-2.297 5.864-5.761 5.864zM21 12h-1.5v1.5h-1.5v-1.5h-1.5v-1.5h1.5v-1.5h1.5v1.5h1.5v1.5z">
+                                    </path>
+                                </svg>
+                                <span class="ScreenReaders">Pagina de Google+ a Carturestiului</span>
+                            </a>
+                        </li>  -->
+                            <li class="FooterSocialItem">
+                                <!-- youtube-->
+                                <a class="FooterSocialLink YouTube" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)"
+                                            d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z">
+                                        </path>
+                                    </svg>
+                                    <span class="ScreenReaders">Pagina de Youtube a Carturestiului</span>
+                                </a>
+                            </li>
+                            <li class="FooterSocialItem Instagram">
+                                <!-- instagram-->
+                                <a class="FooterSocialLink" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)"
+                                            d="M20,6.5A0.5,0.5 0 0,1 19.5,7H17.5A0.5,0.5 0 0,1 17,6.5V4.5A0.5,0.5 0 0,1 17.5,4H19.5A0.5,0.5 0 0,1 20,4.5M4.5,20A0.5,0.5 0 0,1 4,19.5V11H6.09C6.03,11.32 6,11.66 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12C18,11.66 17.96,11.32 17.91, 11H20V19.5A0.5,0.5 0 0,1 19.5,20M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+                                        </path>
+                                    </svg>
+                                    <span class="ScreenReaders">Pagina de Instagram a Carturestiului</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </h2>
+                    <!-- <h2 class="FooterTitle">
+                Recomandam
+            </h2> -->
+                </section>
+
+                <section class="FooterSection FooterNewsletter">
+
+                    <h2 class="FooterTitle">
+                        Aboneaza-te la newsletter
+                    </h2>
+                    <p class="FooterParagraph">Primește promoții, noutăți și oferte personalizate direct în Inbox</p>
+                    <form class="Form FooterNewsletterForm" id="footerNewsletterForm" action="#" method="post">
+
+                        <fieldset class="Fieldset">
+                            <legend class="Legend ScreenReaders">Dă-ne datele tale și promitem că nu-ți dăm prea mult
+                                spam:
+                            </legend>
+                            <label class="Label NewsletterLabel">
+                                <span class="NewsletterLabelText">Adresa ta de e-mail:</span>
+                                <input class="Input NewsletterInput" placeholder="Introdu mail-ul tău..." type="email"
+                                    maxlength="200" required="required" id="newsletter-email" name="newsletter-email" />
+                            </label>
+                            <label class="Label NewsletterLabel">
+                                <span class="NewsletterLabelText">Prenumele tău:</span>
+                                <input class="Input NewsletterInput" placeholder="Introdu prenumele tău..." type="text"
+                                    required="required" maxlength="200" id="newsletter-firstname"
+                                    name="newsletter-firstname" />
+                            </label>
+                            <label class="Label NewsletterLabel">
+                                <span class="NewsletterLabelText">Numele tău:</span>
+                                <input class="Input NewsletterInput" placeholder="Introdu numele tău..." type="text"
+                                    required="required" maxlength="200" id="newsletter-lastname"
+                                    name="newsletter-lastname" />
+                            </label>
+                            <button class="SubmitButton NewsletterSubmit" type="submit">
+                                <span>Abonează-te acum &raquo;</span>
+                            </button>
+                        </fieldset>
+                    </form>
+                </section>
+
+
+                <section class="FooterSection FooterContact">
+                    <h2 class="FooterTitle">
+                        Asistenta telefonica
+                    </h2>
+                    <p class="FooterParagraph">Suport comenzi și ofertă online</p>
+                    <p class="FooterParagraph">Luni - Vineri: 9:00 - 20:00
+                        Sâmbată - Duminică: 10:00 - 18:00</p>
+
+
+                    <p class="FooterParagraph">tel.:<a href="tel:0376448000">0376448000</a></p>
+                </section>
+                <section class="FooterSection FooterPayment">
+                    <h2 class="FooterTitle">Optiuni de plata</h2>
+                    <p class="FooterParagraph">Da, acceptam bani</p>
+                </section>
+                <section class="FooterSection FooterSecurity">
+                    <h2 class="FooterTitle">Shopping securizat</h2>
+                    <p class="FooterParagraph">Probabil</p>
+                </section>
+
+                <section class="FooterSection FooterCopy">
+                    <ul class="FooterLinksList">
+                        <li class="FooterLinksItem">
+                            <a class="FooterLink" href="#"
+                                title="Citește detalii despre termenii și condițiile de folosire a site-ului">Termeni
+                                &amp; condiții</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a class="FooterLink" href="#"
+                                title="Citește detalii despre politica de confidențialitate și folosire a cookie-urilor pe site">Politică
+                                Cookie-uri</a>
+                        </li>
+                        <li class="FooterLinksItem">
+                            <a class="FooterLink" href="#"
+                                title="Mergi pe site-ul ANPC dacă ai nevoie să depui o plângere">ANPC</a>
+                        </li>
+                    </ul>
+                    <p class="FooterParagraph">© Carturesti 2023 | ® Conținut cu drepturi protejate<br /> Acest proiect
+                        are pur scop educațional și nu este menit să aducă vreun detriment brand-ului Cărturești sau
+                        site-ului <a href="https://www.carturesti.ro">Cărturești.ro</a>.</p>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script defer src="resources/script.js"></script>
+</body>
+
+</html>

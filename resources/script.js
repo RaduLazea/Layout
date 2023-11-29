@@ -18,25 +18,23 @@ let $sliderPickerList = document.getElementById("sliderPicker");
 
 let currentSlide = 1;
 
-let $sliderList = document.getElementById('sliderList');
+let $sliderList = document.getElementById("sliderList");
 
 let allSlides = $sliderList.childElementCount;
 
-
 function selectSlide(position) {
-	$sliderList.children[currentSlide - 1].classList.remove('Active');
-	$sliderPickerList.children[currentSlide - 1].classList.remove('Active');
+	$sliderList.children[currentSlide - 1].classList.remove("Active");
+	$sliderPickerList.children[currentSlide - 1].classList.remove("Active");
 	currentSlide = position;
-	$sliderList.children[currentSlide - 1].classList.add('Active');
-	$sliderPickerList.children[currentSlide - 1].classList.add('Active');
+	$sliderList.children[currentSlide - 1].classList.add("Active");
+	$sliderPickerList.children[currentSlide - 1].classList.add("Active");
 }
-
 
 $previousSliderLink.addEventListener(
 	"click",
 	() => {
-		let position = (currentSlide === 1) ? allSlides : (currentSlide - 1);
-	    selectSlide(position);
+		let position = currentSlide === 1 ? allSlides : currentSlide - 1;
+		selectSlide(position);
 	},
 	true
 );
@@ -44,26 +42,27 @@ $previousSliderLink.addEventListener(
 $nextSliderLink.addEventListener(
 	"click",
 	() => {
-		let position = (currentSlide === allSlides) ? 1 : (currentSlide + 1);
-	    selectSlide(position);
+		let position = currentSlide === allSlides ? 1 : currentSlide + 1;
+		selectSlide(position);
 	},
 	true
 );
 
-
-$sliderPickerList.querySelectorAll('.SliderPickerLink').forEach((el, index) => {
-	el.addEventListener('click', () => {
-		let position = index + 1;
-		selectSlide(position);
-	}, true);
+$sliderPickerList.querySelectorAll(".SliderPickerLink").forEach((el, index) => {
+	el.addEventListener(
+		"click",
+		() => {
+			let position = index + 1;
+			selectSlide(position);
+		},
+		true
+	);
 });
 
 /* instanțierea service worker-ului */
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('service-worker.js');
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker.register("service-worker.js");
 }
-
-
 
 /* function search_book() {
 	let input = document.getElementById("searchInput").value;
@@ -80,27 +79,38 @@ if ('serviceWorker' in navigator) {
 } */
 
 function search_book1() {
-	const searchbox = document.getElementById("searchInput").value
+	const searchbox = document.getElementById("searchInput").value;
 	const storeitems = document.getElementById("bookGrid");
 
 	const product = document.querySelectorAll("BookGridItem");
 
 	const pname = document.getElementsByClassName("BookTitle");
 
-	
-
 	for (i = 0; i < pname.length; i++) {
-		let match = product[i].getElementsByClassName('BookTitle')[0];
+		let match = product[i].getElementsByClassName("BookTitle")[0];
 
-        if (match){
-            let textValue = match.textContent || match.innerHTML
+		if (match) {
+			let textValue = match.textContent || match.innerHTML;
 
-            if(textValue.toUpperCase().indexOf(searchbox)> -1){
-                product[i].style.display = "";
-            }else{
-                product[i].style.display = "none";
-            }
-        }
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			} else {
+				product[i].style.display = "none";
+			}
+		}
 	}
 }
 
+function range_book() {
+	const slideValue = document.querySelector("span");
+	const inputSlider = document.querySelector("input");
+	inputSlider.oninput = () => {
+		let value = inputSlider.value;
+		slideValue.textContent = value;
+		slideValue.style.left = value / 2 + "%";
+		slideValue.classList.add("show");
+	};
+	inputSlider.onblur = () => {
+		slideValue.classList.remove("show");
+	};
+}

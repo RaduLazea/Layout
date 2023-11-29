@@ -580,6 +580,7 @@ a:hover{color: #000;}
 		background: #eee;
 		border-top: 1px solid #ddd;
 		padding-bottom: 1px;
+		
 	}
 		.FooterContainer{
 			
@@ -591,7 +592,7 @@ a:hover{color: #000;}
 				display: grid;
 				grid-template-columns:1fr 1fr 1fr ;
 		 		grid-template-rows: auto;
-				grid-template-areas: "links misc newsletter" "contact payment security" "copyright copyright copyright";
+				grid-template-areas: "links misc newsletter" "contact payment security" "map map map" "copyright copyright copyright" ;
 			}
 
 			@media (min-width: 1080px) { column-gap: clamp(2rem, 3vw, 4rem); row-gap: 1em; }
@@ -599,6 +600,17 @@ a:hover{color: #000;}
 			.FooterSection{
 				display: block;	
 			}
+
+				.FooterMap{
+				max-width: 86rem;
+				/* margin: 0; */
+				grid-area: map;
+				}	
+					.Map{
+					display: block;
+					width: 100%;
+					height: 350px;
+					}
 
 				.FooterLinks{
 					grid-area: links;
@@ -765,6 +777,8 @@ a:hover{color: #000;}
 					@media (min-width: 700px) { display: flex; flex-direction: row; border-top: 1px solid #ddd; }
 				}
 
+			
+
 /*******************************************/
 
 
@@ -825,3 +839,209 @@ body {
 	.ListaText { display: inline; color: #00f; white-space: normal; text-decoration: underline; }
 
 } */
+
+
+/*******************************************************/
+
+
+/*	Book Page  */
+
+	.Main_Book_Page{
+		display: block;
+		margin: 0;
+		
+	}
+
+		.Book_Section{
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			padding-bottom:20px ;
+			justify-content: center;
+			/* align-items: center; */
+			text-align: center;
+			/* align-items:center; */
+
+			@media(min-width: 500px){
+				display:flex;
+				flex-direction: row;
+			}
+		}
+
+			.BookContainer{
+				display: block;
+			}
+
+				.BookPicture{
+					display: block;
+				}
+
+				.BookTumbnail{
+					display: block;
+							width: 100%;
+							height: auto;
+							margin: 1rem 0;
+
+							@media (min-width:500xp){
+								float: left;
+								width: 33%;
+								height: auto;
+								
+							}
+							@media (min-width:580px){
+								width: 25rem; 
+								height: auto;
+							}
+							@media (min-width:650px){
+								width: 100%; 
+								height: auto; 
+								max-width: 450px; 
+								margin: 1rem auto;
+							}
+				}
+
+			.BookDescription{
+				display: flex;
+				flex-direction: column;
+				padding: 0 15px;
+				margin: 0;
+
+				
+				
+			}
+				.BookTitleContainer{
+					display: block;
+					/* line-height:3rem; */
+					margin: 0;
+					padding-bottom: 1.5rem;
+					@media(min-width: 500px){
+						line-height: 2rem;
+						
+					}
+
+				}
+					.BookPageTitle{
+						display: block;
+						font-size: 2rem;
+						font-family: "Inter var", Helvetica, Arial, sans-serif;
+						margin:0;
+						padding: 2rem 0 1rem 0;
+						@media(min-width:500px){
+							font-size: clamp(1.5rem,4vw,2.8rem);
+
+						}
+						@media(min-width:850px){
+							font-size: 2.5rem;
+							font-weight: 600;
+						}
+					}
+
+					.BookPageSubTitle{
+						display: block;
+						font-size: 1.5rem;	
+						margin: 0;
+						padding: 1rem 0 1rem 0;
+						font-style: italic;
+
+						@media(min-width:500px) {
+							font-size: 1rem;
+								
+						}
+						@media(min-width:850px){
+							font-size: 1.8rem;
+
+						}
+					}
+					.BookAuthor{
+						display: block;
+						font-size: 1.1rem;
+						font-weight: bolder;
+						@media(min-width:850px){
+							font-size: clamp(1.2rem,2vw,1.6rem);
+
+						}
+					}
+
+					.ProductDesc{
+						display: flex;
+						flex-direction: column;
+						flex-wrap: nowrap;
+						/* align-items: flex-start; */
+						
+					}
+						.BookAttr{
+							display: flex;
+							flex-direction: row;
+							justify-content:space-between
+						}
+
+							.BookAttrLeft{
+								display: block;
+							}
+
+							.BookAttrRight{
+								display: block;
+							}
+
+							.BookAttrLabel{
+								display: block;
+							}
+
+						.BookAttrP{
+							display: block;
+							margin: 0;
+						}
+
+						.BookAttr div{
+							display: block;
+						}
+
+
+
+
+						.AddToContainer{
+							display: block;
+						}
+
+							.AddButtonContainer{
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								
+							}
+								.AddToCartButton{
+									display: block;
+									width: clamp(20%,11.5rem,80%);
+									padding: 1rem;
+									margin-bottom: 0.5rem;
+
+									background: #b10606;
+									color: #fff;
+									border: none;
+									font-weight: bold;
+									text-transform: uppercase;
+									cursor: pointer;
+									border-radius: 1em;
+									
+									&:hover { background: #620303; color: #fff; }
+								}
+
+								.AddToWishButton{
+										display: block;
+										width: clamp(20%,11.5rem,80%);
+										padding: 1rem;
+										background: #ffe300;
+										color: #fff;
+										border: none;
+										font-weight: bold;
+										text-transform: uppercase;
+										cursor: pointer;
+										border-radius: 1em;
+										
+										&:hover { background: #efcd00; color: #fff; }
+								}
+
+
+
+
+
